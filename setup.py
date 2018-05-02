@@ -31,6 +31,30 @@ setup(
     },
     package_data={'': ['README.rst', 'LICENSE']},
     install_requires=['requests >= 1.0.0'],
+    extras_require={
+        'test': [
+            'pytest==3.5.1',
+        ],
+        'server': [
+            'appdirs>=1.4.3',
+            'beautifulsoup4>=4.6.0',
+            'click>=6.7',
+            'Flask-Admin>=1.5.0',
+            'flask-paginate>=0.5.1',
+            'flask-sqlalchemy>=2.3.2',
+            'Flask-WTF>=0.14.2',
+            'Flask>=0.12.2',
+            'furl>=1.0.1',
+            'SQLAlchemy-Utils>=0.32.18',
+            'sqlalchemy>=1.2.4',
+            'structlog>=18.1.0',
+        ],
+    },
+    entry_points={
+        'console_scripts': [
+            'basc-py4chan-server = basc_py4chan_server.__main__:cli'
+        ]
+    },
     keywords='4chan api',
     classifiers=[
         'Intended Audience :: Developers',
