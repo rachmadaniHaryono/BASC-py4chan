@@ -17,13 +17,13 @@ from setuptools import setup
 
 setup(
     name='BASC-py4chan',
-    version='0.6.3',
+    version='0.6.5',
     description=("Python 4chan API Wrapper. Improved version of Edgeworth's "
                  "original py-4chan wrapper."),
     long_description=open('README.rst').read(),
     license=open('LICENSE').read(),
-    author='Antonizoon (Lawrence Wu)',
-    author_email='sagnessagiel@gmail.com',
+    author='Antonizoon Overtwater',
+    author_email='antonizoon@bibanon.org',
     url='http://github.com/bibanon/BASC-py4chan',
     packages=['basc_py4chan'],
     package_dir={
