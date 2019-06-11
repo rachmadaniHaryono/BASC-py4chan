@@ -26,38 +26,26 @@ def test_main():
         [('_board_name', '3'), ('_https', False), ('_protocol', 'http://'), ('_thread_cache', {})]
     assert list(zip(*non_jsonable_obj))[0] == ('_url', '_requests_session')
     assert isinstance(board0._url, Url)
-    assert vars(board0._url) ==  {
-        'URL': {
-            'api': {
-                'board': 'http://a.4cdn.org/{board}/{page}.json',
-                'thread': 'http://a.4cdn.org/{board}/thread/{thread_id}.json'
-            },
-            'data': {
-                'file': 'http://i.4cdn.org/{board}/{tim}{ext}',
-                'static': 'http://s.4cdn.org/image/{item}',
-                'thumbs': 'http://i.4cdn.org/{board}/{tim}s.jpg'
-            },
-            'domain': {
-                'api': 'http://a.4cdn.org',
-                'boards': 'http://boards.4chan.org',
-                'file': 'http://i.4cdn.org',
-                'static': 'http://s.4cdn.org',
-                'thumbs': 'http://i.4cdn.org'
-            },
-            'http': {
-                'board': 'http://boards.4chan.org/{board}/{page}.json',
-                'thread': 'http://boards.4chan.org/{board}/thread/{thread_id}'
-            },
-            'listing': {
-                'archived_thread_list': 'http://a.4cdn.org/{board}/archive.json',
-                'board_list': 'http://a.4cdn.org/boards.json',
-                'catalog': 'http://a.4cdn.org/{board}/catalog.json',
-                'thread_list': 'http://a.4cdn.org/{board}/threads.json'
-            }
-        },
-        '_board_name': '3',
-        '_protocol': 'http://'
-    }
+    assert vars(board0._url) ==  \
+        {
+            'URL': {
+                'api': {'board': 'http://a.4cdn.org/{board}/{page}.json', 'thread': 'http://a.4cdn.org/{board}/thread/{thread_id}.json'},
+                'data': {'file': 'http://i.4cdn.org/{board}/{tim}{ext}', 'static': 'http://s.4cdn.org/image/{item}', 'thumbs': 'http://i.4cdn.org/{board}/{tim}s.jpg'},
+                'domain': {
+                    'api': 'http://a.4cdn.org',
+                    'boards': 'http://boards.4chan.org',
+                    'boards_4channel': 'http://boards.4channel.org',
+                    'file': 'http://i.4cdn.org',
+                    'static': 'http://s.4cdn.org',
+                    'thumbs': 'http://i.4cdn.org'},
+             'http': {'board': 'http://boards.4chan.org/{board}/{page}', 'thread': 'http://boards.4chan.org/{board}/thread/{thread_id}'},
+             'listing': {
+                 'archived_thread_list': 'http://a.4cdn.org/{board}/archive.json',
+                 'board_list': 'http://a.4cdn.org/boards.json',
+                 'catalog': 'http://a.4cdn.org/{board}/catalog.json',
+                 'thread_list': 'http://a.4cdn.org/{board}/threads.json'}},
+            '_board_name': '3',
+            '_protocol': 'http://'}
 
 
 @pytest.fixture
