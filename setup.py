@@ -42,6 +42,7 @@ setup(
             'Flask-Admin>=1.5.0',
             'flask-paginate>=0.5.1',
             'flask-sqlalchemy>=2.3.2',
+            'Flask-Migrate>=2.5.2',
             'Flask-WTF>=0.14.2',
             'Flask>=0.12.2',
             'furl>=1.0.1',
